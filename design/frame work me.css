@@ -1,0 +1,45 @@
+body > .test {
+  padding: 100px;
+}
+.main-heading h2 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: normal;
+  margin-bottom: 70px;
+  position: relative;
+}
+.main-heading p {
+  line-height: 1.6;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto 100px;
+  color: #777;
+  font-size: 15px;
+}
+.main-heading h2::before {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 2px;
+  background: #333;
+}
+.main-heading h2::after {
+  content: "";
+  position: absolute;
+  position: absolute;
+  bottom: -38px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  background-color: white;
+  border: 2px solid #333;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}

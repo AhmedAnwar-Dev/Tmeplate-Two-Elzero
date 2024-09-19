@@ -1,6 +1,8 @@
 /* Start Varibles */
 :root {
   --main-color: #19c8fa;
+  --transparent-color: rgb(15 116 143 / 70%);
+  --padding-section: 100px;
 }
 /* End Varibles */
 /* Start Golbal Rules */
@@ -11,7 +13,6 @@
   margin: 0;
 }
 body {
-  background-color: #333;
   font-family: "Open Sans", sans-serif;
 }
 .continer {
@@ -154,58 +155,274 @@ header .continer nav .from i {
   background-image: url(../images/landing.jpg);
   background-size: cover;
 }
-.overley {
+.landing .overley {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: #00000057;
+  background-color: rgb(0 0 0 / 40%);
 }
-.landing .continer .info {
-  width: 50%;
+.landing .info {
   position: absolute;
   top: 50%;
-  left: 3px;
-  min-height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 50px;
+  left: 0;
   transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  background-color: #0368858a;
+  background-color: var(--transparent-color);
+  padding: 50px;
+  width: 50%;
   color: white;
-  z-index: 2;
+  display: flex;
+  justify-content: end;
 }
-.landing .continer .info h2 {
-  line-height: 1.5;
-  font-weight: normal;
-  margin-bottom: 10px;
+.landing .info .content {
+  max-width: 500px;
+}
+@media (max-width: 767px) {
+  .landing .info {
+    width: 100%;
+  }
+  .landing .info.content {
+    max-width: 100%;
+  }
+}
+.landing .info .content h2 {
   font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
-.landing .continer .info p {
+.landing .info .content p {
   font-size: 14px;
   line-height: 2;
 }
-.landing .left,
-.landing .right {
+.landing .change {
   position: absolute;
   top: 50%;
-  color: white;
-  font-size: 32px;
-  z-index: 4;
   transform: translateY(-50%);
+  font-size: 30px;
+  color: white;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
 }
+@media (max-width: 767px) {
+  .landing .change {
+    display: none;
+  }
+}
 .landing .left {
-  left: 10px;
+  left: 30px;
 }
 .landing .right {
-  right: 10px;
+  right: 30px;
+}
+.landing ul {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.landing ul li {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: white solid 1px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.landing ul li.active {
+  background-color: var(--main-color);
 }
 /* End Landing */
+/* Start Services */
+.services {
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+}
+@media (min-width: 768px) {
+  .services .services-continer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    row-gap: 40px;
+    column-gap: 80px;
+  }
+}
+.services .srv-box {
+  display: flex;
+}
+.services .srv-box i {
+  margin-right: 50px;
+}
+@media (max-width: 767px) {
+  .services .services-continer {
+    text-align: center;
+  }
+  .services .srv-box { 
+    flex-direction: column;
+    margin: 0 0 40px 0;
+  }
+  .services .srv-box i {
+    margin: 0 0 40px 0;
+  }
+}
+.services .srv-box h3 {
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+.services .srv-box p {
+  line-height: 2;
+}
+/* End Services */
+/* Start Design */
+.design {
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+  background-image: url(../images/design-features.jpg);
+  background-size: cover;
+  height: 600px;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.design::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 40%);
+}
+.design .image,
+.design .text {
+  z-index: 2;
+  flex: 1;
+}
+.design .text {
+  padding: 50px;
+  background-color: var(--transparent-color);
+}
+@media (max-width: 767px) {
+  .design .image {
+    display: none;
+  }
+  .design .text {
+    max-width: 100%;
+  }
+}
+.design .text h2 {
+  font-weight: normal;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+.design .text ul li {
+  padding: 15px;
+  font-size: 20px;
+}
+.design .text ul li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f390";
+  font-weight: 900;
+  margin-right: 10px;
+  font-size: 20px;
+}
+.design .image {
+text-align: center;
+overflow: hidden;
+position: relative;
+top: 150px;
+}
+/* End Design */
+/* Start Portfolio */
+.Portfolio {
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+}
+.Portfolio ul {
+  display: flex;
+  justify-content: center;
+}
+.Portfolio ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  margin-bottom: 70px;
+  width: 40px;
+  height: 40px;
+  color: #333;
+  font-size: 19px;
+}
+.Portfolio ul .active {
+  background-color: var(--main-color);
+  color: white;
+}
+.Portfolio .portfolio-continer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Portfolio .box {
+  width: calc(100% / 4);
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 1199px) {
+  .Portfolio .box {
+    width: calc(100% / 2);
+  }
+}
+@media (max-width: 767px) {
+  .Portfolio .box {
+    width: 100%;
+  }
+}
+.Portfolio .box img {
+  max-width: 100%;
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+}
+.Portfolio .box:hover img {
+  transform: rotate(3deg) scale(1.1);
+  -webkit-transform: rotate(3deg) scale(1.1);
+  -moz-transform: rotate(3deg) scale(1.1);
+  -ms-transform: rotate(3deg) scale(1.1);
+  -o-transform: rotate(3deg) scale(1.1);
+}
+.Portfolio .box .caption {
+  line-height: 1.5;
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+  background: white;
+  bottom: -100%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.Portfolio .box:hover .caption {
+  bottom: 0px;
+}
+.Portfolio .box .caption h4 {
+  font-weight: normal;
+}
+.Portfolio .box .caption p {
+  color: #19c8fa;
+}
+/* End Portfolio */

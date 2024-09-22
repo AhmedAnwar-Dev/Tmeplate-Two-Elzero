@@ -521,6 +521,11 @@ top: 150px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+@media (max-width: 767px) {
+  .states .continer {
+    width: 90%;
+  }
+}
 .states .continer .box {
   text-align: center;
   padding: 50px;

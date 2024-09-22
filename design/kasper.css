@@ -578,117 +578,111 @@ top: 150px;
 }
 /* End States */
 /* Start Team */
-.skill {
+.our-skill {
   padding-top: var(--padding-section);
   padding-bottom: var(--padding-section);
 }
-.skill .continer {
+.our-skill .continer {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-}
-.skill .continer .box .maini-heading {
-  text-align: center;
-}
-.skill .continer .box .maini-heading h2 {
-  font-weight: normal;
-  margin: 0 0 43px;
-  text-transform: uppercase;
-}
-.skill .continer .box .maini-heading p {
-  color: #777;
-  margin: 0 0 50px;
+  justify-content: space-between;
 }
 @media (min-width: 992px) {
-  .skill .continer .box {
-    flex-basis: 45%;
+  .our-skill .continer > div {
+  flex-basis: 45%;
   }
 }
-.skill .continer .box:first-child .team-skill .team {
+.our-skill .continer > div > h3 {
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin: 0 0 25px;
+}
+.our-skill .continer > div > p {
+  text-align: center;
+  line-height: 1.4;
+  color: #777;
+  margin: 0 0 65px;
+}
+.our-skill .continer .content {
   display: flex;
-  align-items: center;
+  margin-bottom: 40px;
+}
+.our-skill .continer .content img {
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
 }
 @media (max-width: 767px) {
-  .skill .continer .box:first-child .team-skill .team {
+  .our-skill .continer .content {
     flex-direction: column;
     text-align: center;
-    margin-bottom: 60px;
+  }
+  .our-skill .continer .content img {
+    margin: 0 auto 20px;
   }
 }
-.skill .continer .box:first-child .team-skill .image img {
-  margin: 0 20px 25px 0;
-  max-width: 100px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
+.our-skill .continer .content .text {
+  border-bottom: 1px solid #ccc;
 }
-.skill .continer .box:first-child .team-skill .text {
-  position: relative;
-}
-.skill .continer .box:first-child .team-skill .text {
-  line-height: 1.8;
-  border-bottom: 1px solid #ddd;
-}
-.skill .continer .box:first-child .team-skill .text p {
-  color: #777;
+.our-skill .continer .content .text p {
   text-align: right;
+  margin: 20px 0 5px;
+  color: #777;
 }
-.skill .box:first-child .buleets {
+.our-skill .continer .bulets {
   display: flex;
   justify-content: center;
-  margin: 25px 0 60px;
+  margin: 0 0 55px;
 }
-.skill .box:first-child .buleets li {
+.our-skill .continer .bulets li {
   width: 15px;
   height: 15px;
-  margin-right: 5px;
+  border: 1px solid;
+  margin: 0 6px 0 0;
   border-radius: 50%;
-  border: 1px #ddd solid;
 }
-.skill .box:first-child .buleets li.active {
+.our-skill .continer .bulets .active {
   background-color: var(--main-color);
   border: none;
 }
-.skill .box:nth-child(2) .load {
-  margin-bottom: 30px;
+.our-skill .continer .skill .load {
+  margin-bottom: 40px;
 }
-.skill .box:nth-child(2) .load p {
+.our-skill .continer .skill .load h3 {
   text-transform: uppercase;
+  font-weight: normal;
   margin-bottom: 10px;
 }
-.skill .box:nth-child(2) .load .loading {
+.our-skill .continer .skill .load .down {
   height: 30px;
-  width: 100%;
   background-color: #ddd;
 }
-.skill .box:nth-child(2) .load .loading .lad {
-  height: 30px;
-  width: 100%;
-  background-color: var(--main-color);
+.our-skill .continer .skill .load .down .loading {
   position: relative;
+  display: block;
+  height: 100%;
+  background-color: var(--main-color);
 }
-.skill .box:nth-child(2) .load .loading .lad::after {
+.our-skill .continer .skill .load .down .loading::before {
   content: attr(data-skill);
-  position: absolute;
-  top: -32px;
-  right: -15px;
-  width: 38px;
-  height: 25px;
-  background: black;
-  border-radius: 6px;
+  background-color: black;
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
+  position: absolute;
+  top: -40px;
+  right: -18px;
+  padding: 5px 0;
+  width: 40px;
+  border-radius: 5px;
+  text-align: center;
 }
-.skill .box:nth-child(2) .load .loading .lad::before {
+.our-skill .continer .skill .load .down .loading::after {
   content: "";
   position: absolute;
-  top: -8px;
-  right: -3px;
-  border: solid 7px transparent;
+  top: -13px;
+  border: solid 8px transparent;
   border-top-color: black;
+  right: -8px;
 }
 /* End Team */
